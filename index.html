@@ -454,6 +454,8 @@ td {
 
 tr:last-child td { border-bottom: none; }
 tr:hover td { background: rgba(147,51,234,0.04); }
+td.yes { color: var(--green); font-weight: 700; text-align: center; }
+td.no { color: var(--text-dim); text-align: center; }
 
 /* ---- COLLAPSIBLE ---- */
 details {
@@ -716,6 +718,7 @@ details .details-body p:first-child { margin-top: 0; }
   <div class="sidebar-group">
     <div class="sidebar-group-title">Getting Started</div>
     <a href="#overview"><span class="nav-icon">&#127968;</span> Overview</a>
+    <a href="#editions"><span class="nav-icon">&#9878;</span> Compare Editions</a>
     <a href="#installation"><span class="nav-icon">&#10515;</span> Installation</a>
     <a href="#quickstart-generator"><span class="nav-icon">&#9889;</span> Quick Start: Generator</a>
     <a href="#quickstart-library"><span class="nav-icon">&#9783;</span> Quick Start: Library</a>
@@ -805,7 +808,40 @@ details .details-body p:first-child { margin-top: 0; }
     <a class="mini-card" href="#humanoid"><h4>&#129485; Any Humanoid Rig</h4><p>Mixamo, Synty, Quaternius, custom &mdash; if Unity calls it Humanoid, we can drive it.</p></a>
   </div>
 
-  <p>This document covers both tools. Generator-specific topics are grouped under <a href="#how-it-works">Generator</a>; Library-specific topics under <a href="#library-overview">Library</a>. Sections that apply to both live under <a href="#humanoid">Concepts</a> and <a href="#troubleshooting">Reference</a>.</p>
+  <p>Generator-specific topics are under <a href="#how-it-works">Generator</a>; the authoring tools under <a href="#pro-toolset">Pro Toolset</a>; bundled clips under <a href="#library-overview">Library</a>. Shared concepts live under <a href="#humanoid">Concepts</a> and <a href="#troubleshooting">Reference</a>.</p>
+</section>
+
+<!-- ============================================ -->
+<!--             COMPARE EDITIONS                 -->
+<!-- ============================================ -->
+<section class="section" id="editions">
+  <h2><span class="section-icon" style="background:var(--accent-glow);color:var(--accent-light)">&#9878;</span> Compare Editions</h2>
+  <p class="section-desc">You're on <strong>Pro</strong> &mdash; the top tier (150 generations/month plus the full authoring toolset). Here's how the three PromptMotion editions line up.</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr>
+      <th>&nbsp;</th>
+      <th><a href="https://u3d.as/409N" target="_blank" rel="noopener">Lite</a><br><span style="color:var(--text-dim);font-weight:normal;">Free</span></th>
+      <th><a href="https://u3d.as/1qyr" target="_blank" rel="noopener">PromptMotion</a><br><span style="color:var(--text-dim);font-weight:normal;">Standard</span></th>
+      <th>Pro<br><span style="color:var(--text-dim);font-weight:normal;">this asset</span></th>
+    </tr></thead>
+    <tbody>
+      <tr><td>Price</td><td>Free</td><td>Paid</td><td><strong>Paid</strong></td></tr>
+      <tr><td>AI generations</td><td>5 lifetime</td><td>50 / month</td><td><strong>150 / month</strong></td></tr>
+      <tr><td>Activation</td><td>Email code</td><td>Asset Store invoice</td><td>Asset Store invoice</td></tr>
+      <tr><td>Text-to-animation Generator</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+      <tr><td>Any Humanoid rig + auto-retarget</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+      <tr><td>Live preview, history, apply-to-character</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+      <tr><td>Cached prompts are free (don't count)</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+      <tr><td>Bundled Animation Library</td><td class="no">&#10007;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+      <tr><td>Pro Toolset &mdash; batch &amp; variation generation</td><td class="no">&#10007;</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+      <tr><td>Pro Toolset &mdash; Mecanim wiring (controllers + blend trees)</td><td class="no">&#10007;</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+      <tr><td>Pro Toolset &mdash; clip cleanup (trim / loop / mirror / smooth)</td><td class="no">&#10007;</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+      <tr><td>Pro Toolset &mdash; clip sequencer + prompt presets</td><td class="no">&#10007;</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+    </tbody>
+  </table></div>
+
+  <p>Other editions on the Unity Asset Store: <a href="https://u3d.as/409N" target="_blank" rel="noopener">PromptMotion Lite (free, 5 generations)</a> &middot; <a href="https://u3d.as/1qyr" target="_blank" rel="noopener">PromptMotion (Standard, 50/month)</a> &middot; <a href="https://u3d.as/1CAn" target="_blank" rel="noopener">PromptMotion Pro (this asset)</a>.</p>
 </section>
 
 <!-- ============================================ -->
@@ -1598,7 +1634,7 @@ details .details-body p:first-child { margin-top: 0; }
 
   <div class="callout callout-tip" style="margin-top:20px;">
     <span class="callout-icon">&#11088;</span>
-    <div><strong>Enjoying PromptMotion?</strong> A review on the <a href="https://u3d.as/1oGH" target="_blank" rel="noopener">Unity Asset Store</a> helps other developers discover the asset and helps us keep improving it. Thank you!</div>
+    <div><strong>Enjoying PromptMotion Pro?</strong> A <a href="https://u3d.as/1CAn" target="_blank" rel="noopener">review on the Unity Asset Store</a> helps other developers discover it and helps us keep improving it &mdash; thank you!</div>
   </div>
 </section>
 
